@@ -1,0 +1,91 @@
+From 9d56e4bece84998c99f6169db0e74c14e9dd9505 Mon Sep 17 00:00:00 2001
+From: lauren brooks <lb3brooks@gmail.com>
+Date: Sat, 27 May 2017 15:36:14 -0400
+Subject: [PATCH 07/19] Checkpoint 29 completed
+
+---
+ CSS/style.css | 28 +++++++++++-----------------
+ index.html    |  4 ----
+ 2 files changed, 11 insertions(+), 21 deletions(-)
+
+diff --git a/CSS/style.css b/CSS/style.css
+index aa22f23..ccdb05d 100644
+--- a/CSS/style.css
++++ b/CSS/style.css
+@@ -18,7 +18,7 @@ html, body{
+    line-height: 19px;
+    font-weight: 100;
+  }
+-/* GRID */
++ /* GRID */
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+@@ -40,11 +40,19 @@ html, body{
+    position:relative;
+    min-height: 1px;
+    margin:0 2% 20px;
++ }
+ /*Mobile*/
++ @media screen and (min-width:320px)
++   and (max-width:480px){
+ }
+- @media (min-width: 320px) {
++ @media (min-width: 768px) {
+    .container {
+-     width: 300px;
++     width: 750px;
++   }
++ }
++ @media (min-width: 992px) {
++   .container {
++     width: 970px;
+    }
+    .one-half {
+      width:46%;
+@@ -56,20 +64,6 @@ html, body{
+      width:21%;
+    }
+  }
+-/*Tablet*/
+-}
+-@media (min-width: 768px) {
+-   .container {
+-     width: 750px;
+-   }
+-/*Laptop*/ 
+-}
+- @media (min-width: 992px) {
+-   .container {
+-     width: 970px;
+-   }
+-/*Desktop*/ 
+- }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+diff --git a/index.html b/index.html
+index 8cc8d60..a05c63d 100644
+--- a/index.html
++++ b/index.html
+@@ -5,17 +5,13 @@
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Save, share and collaborate | Blocbox</title>
+-     
+   <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Raleway|Syncopate" rel="stylesheet">
+-     
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/animate.css">
+-
+- 
+  </head>
+  <body>
+      <!-- Hero -->
+-- 
+2.11.0 (Apple Git-81)
+

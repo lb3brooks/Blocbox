@@ -1,0 +1,333 @@
+From 859f988e87a83c0990e6e4fc55298df4f46a37e3 Mon Sep 17 00:00:00 2001
+From: lauren brooks <lb3brooks@gmail.com>
+Date: Sun, 28 May 2017 20:42:25 -0400
+Subject: [PATCH 10/19] Homepage styling two completed
+
+---
+ CSS/style.css | 66 ++++++++++++++++++++++++++++++++++++++++-------------------
+ index.html    | 45 ++++++++++++++++++++++------------------
+ 2 files changed, 70 insertions(+), 41 deletions(-)
+
+diff --git a/CSS/style.css b/CSS/style.css
+index 5213969..c0493f0 100644
+--- a/CSS/style.css
++++ b/CSS/style.css
+@@ -18,6 +18,7 @@ html, body{
+    line-height: 19px;
+    font-weight: 100;
+  }
++
+  /* GRID */
+  .container {
+    margin-right: auto;
+@@ -41,9 +42,12 @@ html, body{
+    min-height: 1px;
+    margin:0 2% 20px;
+  }
++
+ /*Mobile*/
+- @media screen and (min-width:320px)
+-   and (max-width:480px){
++ @media (max-width:480px){
++       .container {
++     width: max-width:450px;
++   }
+ }
+ /*Tablet*/
+  @media (min-width: 768px) {
+@@ -66,12 +70,13 @@ html, body{
+      width:21%;
+    }
+  }
+-/*Mobile*/
++/*Desktop*/
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
++
+ /* HEADER */
+  header {
+    color:#FFFFFF;
+@@ -106,6 +111,7 @@ html, body{
+  }
+  header nav ul > li.btn-outline:hover > a {
+    color:#375160;
++   position: relative;
+  }
+ header .hero {
+    text-align: center;
+@@ -113,10 +119,12 @@ header .hero {
+    position: relative;
+  }
+  header .hero h1 {
+-   font-size:48px;
++   font-size:38px;
+    font-weight: normal;
+    margin:95px 0 0;
+- }
++   width: 100%;
++   height: auto;
++   }
+  header .hero p {
+    font-size: 22px;
+    line-height: 26px;
+@@ -126,7 +134,10 @@ header .hero {
+  header .hero img {
+    display: block;
+    margin:3em auto;
++   width: 100%;
++   height: auto;
+  }
++
+ /* BUTTONS */
+  .btn {
+    border-radius: 4px;
+@@ -139,11 +150,13 @@ header .hero {
+    box-shadow: 0px 2px 0px 0px #cc6d00;
+    }
+  }
++
+ /* BENEFITS */
+  .benefits {
+-   text-align:center;
++   text-align: center;
+    display:block;
+    position:relative;
++   width:auto;
+  }
+  .benefits ul {
+    margin: 0 auto;
+@@ -154,22 +167,25 @@ header .hero {
+    display: inline-block;
+  }
+  .benefits i {
+-   color:#375160;
++   color:#3498DB;
+    font-size:60px;
+    margin:0;
+    vertical-align: middle;
+  }
+  .benefits h2 {
+-   color:#375160;
++   color:#3498DB;
+  }
++
+ /*PRICING*/
+ .pricing {
+-    background: #34495E url("../images/background.png") top center no-repeat;
+-   background: url("../images/background.png") top center no-repeat, linear-gradient(206deg, #5F81A3 0%, #34495E 94%);
++   background: #34495E url("../images/background.png") top center no-repeat;
++   background: url("../images/background.png") top center no-repeat, linear-gradient(206deg, #5F81A3 0%, #34495E 94%); 
+    background-size:cover;
+    text-align: center;
+    padding:4em 0;
+-}
++   width: 100%;
++   height: auto;
++   }
+ .pricing h2, .pricing p {
+    color:#FFFFFF;
+  }
+@@ -239,13 +255,14 @@ header .hero {
+    line-height: 15px;
+    font-style:italic;
+  }
++
+ /* TESTIMONIALS */
+  .testimonials {
+    padding:4em 0;
+    text-align: center;
+  }
+  .testimonials h2 {
+-   color:#3498DB;
++   color:#34495E;
+  }
+  .testimonials ul li {
+    list-style-type: none;
+@@ -289,6 +306,7 @@ header .hero {
+ .down {
+     margin: -20px
+ }
++
+ /*Call to Action*/
+ .call-to-action .hero.bottom {
+    text-align: center;
+@@ -305,8 +323,10 @@ header .hero {
+ .call-to-action .hero.bottom {
+    display: block;
+    margin:3em auto;
+- }
++    width: 100%;
++    height: auto;
+ }
++
+ /* FOOTER */
+  footer {
+    background-color: #698392;
+@@ -332,20 +352,25 @@ header .hero {
+    color:#FFFFFF;
+    text-decoration: none;
+  }
+- footer .right-footer-block {
+-   background-color: transparent;
+- }
++ footer .right-footer-block {     
++   display: block;
++   background-color: #698392;
++   background-color: #698392;
++   background-image: linear-gradient(to top,
++   #698392 -20%, #698392 30%, #698392 30%, #34495E 100%);
++}
+  footer .logo{
+-   padding: 3em 0;
++   padding: 2em 0;
+    margin: 0 auto;
+    display: block;
++   background-color: #698392;
++   background-image: linear-gradient(to top,
++   #698392 -20%, #698392 30%, #698392 30%, #34495E 100%);
+  }
+ @media (min-width: 992px){
+    footer{
+      background-color: #698392;
+-     background-image: linear-gradient(to right,
+-        #698392 0%, #698392 33.33337%, #34495E 33.33337%, #34495E 100%);
+-     height: 100px;
++     height: auto;
+    }
+    footer p, footer nav ul{
+      padding: 2em 0;
+@@ -356,5 +381,4 @@ header .hero {
+    }
+    footer .logo{
+      padding: 1em 0 1em 1em;
+-   }
+  }
+\ No newline at end of file
+diff --git a/index.html b/index.html
+index f2708a1..d7e455b 100644
+--- a/index.html
++++ b/index.html
+@@ -14,10 +14,10 @@
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/animate.css">
+-
+- 
++     
+  </head>
+  <body>
++     
+      <!-- Hero -->
+  <header>
+    <nav class="container">
+@@ -31,22 +31,24 @@
+        </ul>
+      </div>
+    </nav>
+-   <div class="container hero">
++   <div class="hero">
+      <h1 class="animated fadeIn">Save, share and collaborate.</h1>
+      <p>blocbox lets you collect and sort information.<br/>Create simple notes, store images, and add links.</p>
+      <a href="signup.html" class="btn">Start Your Free Trial!</a>
+-     <img src="images/dashboard_pic.png" alt="Blocbox" />
++     <img src="images/dashboard_pic.png" alt="Blocbox"/>
+    </div>
+  </header>
+      <main role="main">
++         
+    <!-- Benefits -->
+    <section class="benefits">
+      <ul class="container">
+        <li class="one-third">
+-        <i class="fa fa-file-o"></i>
+-         <h2>Create notes</h2>
+-         <p>Using Markdown, you can create simple text-based documents to save and share. You can collaborate with others to write and edit content.</p>
+-       </li>
++         <i class="fa fa-file-o"></i>
++          <h2>Create notes</h2>
++          <p>Using Markdown, you can create simple text-based documents to save and share. You can collaborate with others to write and edit content.</p>
++         </div>
++        </li>
+        <li class="one-third">
+         <i class="fa fa-picture-o"></i>
+          <h2>Save images</h2>
+@@ -59,7 +61,9 @@
+        </li>
+      </ul>
+    </section>
+-         <!-- Pricing -->
++         
++         
++  <!-- Pricing -->
+  <section class="pricing">
+    <div class="container">
+      <h2>How much does blocbox cost?</h2>
+@@ -109,6 +113,7 @@
+    <p class="small">*We will not collect your credit card information until your 30-day trial has ended.</p>
+  </div>
+  </section>
++         
+      <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+@@ -130,10 +135,10 @@
+     <img src="images/testface.png" alt="Blocbox" /></a>
+        <p class="name"><strong>Stella B.</strong><br/>Freelance Designer, N. Dakota</p>
+      </li>
+-  <li class="one-fourth">
+-      <p class="down">
+-    <blockquote>"blocbox has made it easier to find and keep things I love. I can share with other designers on my team and create new categories with awesome stuff. And creating simple text documents couldn't be easier."
+-    </blockquote>
++      <li class="one-fourth">
++       <p class="down">
++       <blockquote>"blocbox has made it easier to find and keep things I love. I can share with other designers on my team and create new categories with awesome stuff. And creating simple text documents couldn't be easier."
++       </blockquote>
+     <img src="images/testface.png" alt="Blocbox" /></a>
+        <p class="name"><strong>Stella B.</strong><br/>Freelance Designer, N. Dakota</p>
+        </p>
+@@ -143,23 +148,25 @@
+     </blockquote>
+     <img src="images/testface.png" alt="Blocbox" /></a>
+        <p class="name"><strong>Stella B.</strong><br/>Freelance Designer, N. Dakota</p>
+-  </li>     
++    </li>     
+   </ul>
+  </section>
+  </main>
++
+      <!-- Call to Action -->
+  <section class="call-to-action">
+-   <div class="container hero bottom">
++   <div class="hero bottom">
+      <h2>Save, share and collaborate with Blocbox</h2>
+      <p>blocbox lets you collect and sort information.<br/>Create simple notes, store images, and add links.</p>
+      <a href="signup.html" class="btn">Start Your Free Trial today!</a>
+    </div>
+  </section>
++
+  <!-- Footer -->
+  <footer>
+-   <div class="container footer-nav-block">
++   <div class="footer-nav-block">
+        <div class="left-footer-block one-third">
+-         <p class="copyright-block">&copy; 2015. <strong>Blocbox</strong> - All Rights Reserved.</p>
++         <p class="copyright-block">&copy; 2017. <strong>Blocbox</strong> - All Rights Reserved.</p>
+        </div>
+        <nav class="link-block middle-footer-block one-third">
+          <ul>
+@@ -176,6 +183,4 @@
+    </div>
+  </footer>
+  </body>
+- </html> 
+-Contact GitHub API Training Shop Blog About
+-© 2017 GitHub, Inc. Terms Privacy Security Status Help
+\ No newline at end of file
++ </html>
+\ No newline at end of file
+-- 
+2.11.0 (Apple Git-81)
+

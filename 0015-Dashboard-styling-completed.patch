@@ -1,0 +1,27 @@
+From 1bb346784ff1eb1efcdabb92f27cc5d81af11fa9 Mon Sep 17 00:00:00 2001
+From: lauren brooks <lb3brooks@gmail.com>
+Date: Sun, 4 Jun 2017 17:57:04 -0400
+Subject: [PATCH 15/19] Dashboard styling completed
+
+---
+ CSS/style.css | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/CSS/style.css b/CSS/style.css
+index 72e7b01..db8e0ad 100644
+--- a/CSS/style.css
++++ b/CSS/style.css
+@@ -432,8 +432,8 @@ header .hero {
+  }
+     #items a.selected:hover, a.selected:active {
+     display: block;
+-    background-color: #066;
+-    color: #fff;
++    background-color: #ff8800;
++    color: #ffffff;
+ }
+     
+     /* LEFT NAVBAR SETTINGS */
+-- 
+2.11.0 (Apple Git-81)
+

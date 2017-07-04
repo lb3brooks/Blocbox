@@ -1,0 +1,21 @@
+From af7fc3639d47876bc8726c101f0ac67c5c3a2d10 Mon Sep 17 00:00:00 2001
+From: lb3brooks <lb3brooks@gmail.com>
+Date: Tue, 25 Apr 2017 15:23:01 -0400
+Subject: [PATCH 02/19] Create README.md
+
+---
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..0bd26ec
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1,2 @@
++__BLOCBOX__
++<p>*Lauren Alyn Brooks*
+-- 
+2.11.0 (Apple Git-81)
+

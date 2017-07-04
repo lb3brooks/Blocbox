@@ -1,0 +1,140 @@
+From 10f67dd129d791b3d1f959cc03542fed68d7202d Mon Sep 17 00:00:00 2001
+From: lauren brooks <lb3brooks@gmail.com>
+Date: Sun, 28 May 2017 00:41:32 -0400
+Subject: [PATCH 09/19] Checkpoint 31 completed
+
+---
+ CSS/style.css | 79 ++++++++++++++++++++++++++++++++++++++++++++++++++++-------
+ index.html    | 14 +++--------
+ 2 files changed, 73 insertions(+), 20 deletions(-)
+
+diff --git a/CSS/style.css b/CSS/style.css
+index 3d0f716..5213969 100644
+--- a/CSS/style.css
++++ b/CSS/style.css
+@@ -127,7 +127,6 @@ header .hero {
+    display: block;
+    margin:3em auto;
+  }
+-
+ /* BUTTONS */
+  .btn {
+    border-radius: 4px;
+@@ -287,13 +286,75 @@ header .hero {
+    font-size:13px;
+    margin-top: 30px;
+  }
+-.one-fourth-1 {
+-    float: left;
+-   display: inline-block;
+-   text-align: left;
+-   font-size:13px;
+-   margin-top: -20px;
+-}
+ .down {
+     margin: -20px
+-}
+\ No newline at end of file
++}
++/*Call to Action*/
++.call-to-action .hero.bottom {
++   text-align: center;
++   display:block;
++   position: relative;
++   font-size:48px;
++   font-weight: normal;
++   margin:95px 0 0;
++   font-size: 22px;
++   line-height: 26px;
++   font-weight: 100;
++   margin: 10px 0 40px;
++ }
++.call-to-action .hero.bottom {
++   display: block;
++   margin:3em auto;
++ }
++}
++/* FOOTER */
++ footer {
++   background-color: #698392;
++   background-image: linear-gradient(to top,
++      #698392 0%, #698392 50%, #698392 50%, #34495E 100%);
++   color: #FFFFFF;
++   height: 50px;
++   position: relative;
++   overflow: hidden;
++   z-index: 0;
++ }
++ footer p, footer nav ul {
++   font-size:14px;
++   font-weight:100;
++   text-align: center;
++   margin: 10px auto 0;
++ }
++ footer nav ul li {
++   list-style-type: none;
++   display: inline;
++ }
++ footer nav ul li a {
++   color:#FFFFFF;
++   text-decoration: none;
++ }
++ footer .right-footer-block {
++   background-color: transparent;
++ }
++ footer .logo{
++   padding: 3em 0;
++   margin: 0 auto;
++   display: block;
++ }
++@media (min-width: 992px){
++   footer{
++     background-color: #698392;
++     background-image: linear-gradient(to right,
++        #698392 0%, #698392 33.33337%, #34495E 33.33337%, #34495E 100%);
++     height: 100px;
++   }
++   footer p, footer nav ul{
++     padding: 2em 0;
++     text-align: left;
++   }
++   footer .right-footer-block {
++     background-color: #698392;
++   }
++   footer .logo{
++     padding: 1em 0 1em 1em;
++   }
++ }
+\ No newline at end of file
+diff --git a/index.html b/index.html
+index 475f16b..f2708a1 100644
+--- a/index.html
++++ b/index.html
+@@ -148,21 +148,13 @@
+  </section>
+  </main>
+      <!-- Call to Action -->
+- <header>
+-   <nav class="container">
+-     <div class="one-half">
+-       <ul>
+-         <li><a href="signin.html">Sign In</a></li>
+-         <li class="btn-outline"><a href="signup.html">Sign Up</a></li>
+-       </ul>
+-     </div>
+-   </nav>
+-   <div class="container hero">
++ <section class="call-to-action">
++   <div class="container hero bottom">
+      <h2>Save, share and collaborate with Blocbox</h2>
+      <p>blocbox lets you collect and sort information.<br/>Create simple notes, store images, and add links.</p>
+      <a href="signup.html" class="btn">Start Your Free Trial today!</a>
+    </div>
+- </header>
++ </section>
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-nav-block">
+-- 
+2.11.0 (Apple Git-81)
+
